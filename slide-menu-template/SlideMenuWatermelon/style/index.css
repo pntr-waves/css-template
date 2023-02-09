@@ -1,0 +1,77 @@
+a {
+    color: white;
+}
+
+.MenuItem {
+    width: 250px;
+    height: 100vh;
+    background-color: rgba(0,20, 60, 0.9);
+    color: white;
+    margin-left: -250px;
+    transition: all 300ms ease-in-out;
+}
+
+.SlideMenu.Open .MenuItem {
+    margin-left: 0;
+}
+
+.MenuButton {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    position: relative;
+    opacity: 0.4;
+    transition: opacity 100ms;
+}
+
+.MenuButton:hover {
+    opacity: 1;
+}
+
+.SlideMenu.Open .MenuButton{
+    background-color: rgba(0,20, 60, 0.9);
+    opacity: 1;
+}
+
+.MenuLineEntry {
+    flex: 1;
+    justify-content: center;
+}
+
+.MenuLine {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+    transition: top 50ms, transform 100ms, opacity 100ms;
+}
+
+.SlideMenu.Open .MenuLine1 {
+    transform: rotate3d(0, 0, 1, 45deg);
+    position: absolute;
+    top: 13px;
+}
+
+.SlideMenu.Open .MenuLine2 {
+    opacity: 0;
+}
+
+.SlideMenu.Open .MenuLine3 {
+    transform: rotate3d(0, 0, 1, -45deg);
+    position: absolute;
+    top: 13px;
+}
+
+.ListItem {
+    height: 0;
+    width: 0;
+    opacity: 0;
+    margin-left: -20px;
+    transition: height 300ms ease-in-out, width 400ms ease-in-out;
+}
+
+.SlideMenu.Open .ListItem {
+    height: 30px;
+    width: inherit;
+    opacity: 1;
+}
